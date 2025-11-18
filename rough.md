@@ -1,8 +1,4 @@
-# An AI based day-to-day task, activities and resource manager to keep you afloat. 
-
-Made as a capstone project for the Google x Kaggle AI Course!
-
-## Features:
+# Afloat and Alive : Might be a fancy task manager for all I know.
 
 ## Base features:
 
@@ -22,19 +18,36 @@ Made as a capstone project for the Google x Kaggle AI Course!
     4. Monthly:
         - pay bills etc
     5. Custom tasks that repeat.
+
+#### SQL:
+    CREATE TABLE activities(
+        id INT,
+        timestamp TIME,
+        category ENUM IN ('mental_health', 'daily_essentials', 'weekly_activities', 'monthly', 'custom');
+        description TEXT,
+        impact ENUM IN ('negative' , 'positive')
+    );
         
-### Task Tracker sub features:
+### Task Tracker:
 
     1. Special out of loop tasks
     2. Custom one occurence tasks
 
-### Resource Tracker sub features:
+#### SQL:
+    CREATE TABLE task(
+        id INT,
+        timestamp,
+        desc,
+        deadline
+    )
+
+### Resource Tracker:
 
     1. Money
     2. Groceries
     3. Misc.
 
-### Mood and Health sub features:
+### Mood and Health:
 
-    1. Understand through chats
+    1. Through chats
         - keep track of words, time and patterns
