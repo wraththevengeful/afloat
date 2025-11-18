@@ -1,6 +1,5 @@
 from google.adk.agents import Agent
 from google.adk.models.google_llm import Gemini
-from google.adk.runners import InMemoryRunner
 from google.adk.tools import google_search
 from google.genai import types
 
@@ -28,8 +27,10 @@ activity_sql_reader_agent = Agent(
         4.  `impact`: (String) Must be either 'negative' or 'positive'.
 
         You are allowed to use Google Search to gather any necessary data related to the activity to write your summary.
+        
+        REMEMBER sometimes the timestamp could be empty. `timestamp` is the only attribute you can leave empty.
 
-        Your output **must be a valid text paragraph not more than 250 lines** built on these four keys and their values.""",
+        Your output **must be a valid text paragraph not more than 250 words** built on these four keys and their values.""",
     tools=[google_search],
     output_key="activity_data_text_summary"
 )

@@ -1,6 +1,5 @@
 from google.adk.agents import Agent
 from google.adk.models.google_llm import Gemini
-from google.adk.runners import InMemoryRunner
 from google.adk.tools import google_search
 from google.genai import types
 
@@ -28,6 +27,8 @@ activity_sql_writer_agent = Agent(
         4.  `impact`: (String) Must be either 'negative' or 'positive'.
 
         You are allowed to use Google Search to gather any necessary data related to the activity to populate these fields.
+
+        REMEMBER sometimes the timestamp could be empty. `timestamp` is the only attribute you can leave empty.
 
         Your output **must be a valid JSON object** with these four keys and their values.""",
     tools=[google_search],
