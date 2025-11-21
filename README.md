@@ -21,7 +21,7 @@ Made as a capstone project for the Google x Kaggle AI Course!
         - Wash your sheets etc
     4. Monthly:
         - pay bills etc
-    5. Custom tasks that repeat.
+    5. Custom tasks that repeat.-renew passes,pet care,hair wash schedule,birthday reminders
         
 ### Task Tracker sub features:
 
